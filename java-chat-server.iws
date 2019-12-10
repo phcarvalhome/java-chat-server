@@ -2,60 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="284226af-b6ff-4702-8910-24105c3c7264" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-chat-server.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-chat-server.ipr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-chat-server.iws" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/controller/ConnectedUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/controller/ConnectionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/controller/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/dependencyfactory/DependencyFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/ConnectedUserModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/ConnectionModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/MainModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/commandtemplate/IChatCommandTemplate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/commandtemplate/ICommandTemplate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/commandtemplate/IConnectionCommandTemplate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/commandtemplate/local/ChatLocalCommandTemplate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/commandtemplate/local/ConnectionLocalCommandTemplate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/commandtemplate/local/socket/CommandInvoker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/commandtemplate/remote/adapter/AbstractCommandTemplateAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/commandtemplate/remote/adapter/ChatRemoteCommandTemplateAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/commandtemplate/remote/adapter/ConnectionRemoteCommandTemplateAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/commandtemplate/remote/adapter/IChatCommandTemplateAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/commandtemplate/remote/adapter/IConnectionCommandTemplateAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/commandtemplate/remote/socket/ChatRemoteCommandTemplate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/commandtemplate/remote/socket/ConnectionRemoteCommandTemplate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/protocol/vo/CommandTemplateEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/protocol/vo/CommandTypeEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/protocol/vo/RemoteEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/protocol/vo/command/AbstractCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/protocol/vo/command/ConnectCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/protocol/vo/command/DisconnectCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/protocol/vo/command/ICommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/protocol/vo/command/SendMessageCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/strategy/ICommandTemplateFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/strategy/IConnectionStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/strategy/factory/ICommunicationStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/strategy/factory/RMIStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/strategy/factory/SocketStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/strategy/rmi/RMICommandTemplateFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/strategy/rmi/RMIConnectionStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/strategy/socket/RemoteUserSocketConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/strategy/socket/SocketCommandTemplateFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/strategy/socket/SocketConnectionStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/strategy/vo/CommandTemplateSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/configuration/Configuration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/configuration/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/configuration/startingposition/vo/StartingPositionEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/exception/ConnectionException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/util/LogUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/view/ConnectedUserView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/view/ConnectionView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/view/MainView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/view/util/DialogUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-chat-server.iws" beforeDir="false" afterPath="$PROJECT_DIR$/java-chat-server.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/MainModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/MainModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/protocol/vo/command/SendMessageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/phcarvalho/model/communication/protocol/vo/command/SendMessageCommand.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +71,10 @@
       <updated>1575836633493</updated>
       <workItem from="1575836638177" duration="6071000" />
       <workItem from="1575852652004" duration="208000" />
-      <workItem from="1575852882900" duration="2470000" />
+      <workItem from="1575852882900" duration="3411000" />
+      <workItem from="1575952139027" duration="832000" />
+      <workItem from="1575953143739" duration="2509000" />
+      <workItem from="1575955779692" duration="1573000" />
     </task>
     <servers />
   </component>

@@ -5,6 +5,7 @@ import com.phcarvalho.dependencyfactory.DependencyFactory;
 import com.phcarvalho.model.communication.commandtemplate.remote.adapter.ChatRemoteCommandTemplateAdapter;
 import com.phcarvalho.model.communication.protocol.vo.command.SendMessageCommand;
 import com.phcarvalho.model.configuration.Configuration;
+import com.phcarvalho.model.configuration.entity.User;
 
 public class MainModel {
 
@@ -23,5 +24,8 @@ public class MainModel {
 //
 //        game.getRemoteUserList()
 //                .forEach(remoteUser -> chatRemoteCommandTemplateAdapter.sendMessage(sendMessageCommand, remoteUser));
+        User targetUser = sendMessageCommand.getTargetUser();
+
+        chatRemoteCommandTemplateAdapter.sendMessage(sendMessageCommand, targetUser);
     }
 }
