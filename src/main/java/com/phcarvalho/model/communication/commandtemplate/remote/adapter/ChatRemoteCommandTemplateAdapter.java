@@ -2,6 +2,8 @@ package com.phcarvalho.model.communication.commandtemplate.remote.adapter;
 
 import com.phcarvalho.dependencyfactory.DependencyFactory;
 import com.phcarvalho.model.communication.commandtemplate.IChatCommandTemplate;
+import com.phcarvalho.model.communication.protocol.vo.command.BecomeOfflineCommand;
+import com.phcarvalho.model.communication.protocol.vo.command.BecomeOnlineCommand;
 import com.phcarvalho.model.communication.protocol.vo.command.SendMessageCommand;
 import com.phcarvalho.model.communication.strategy.ICommandTemplateFactory;
 import com.phcarvalho.model.configuration.entity.User;
@@ -32,6 +34,28 @@ public class ChatRemoteCommandTemplateAdapter extends AbstractCommandTemplateAda
             get(remoteUser).sendMessage(sendMessageCommand);
         } catch (RemoteException e) {
             LogUtil.logError("Error in the send message command remote invocation!",
+                    CHAT_REMOTE_COMMAND, e);
+        }
+    }
+
+    @Override
+    public void becomeOnline(BecomeOnlineCommand becomeOnlineCommand, User remoteUser) {
+
+        try {
+            get(remoteUser).becomeOnline(becomeOnlineCommand);
+        } catch (RemoteException e) {
+            LogUtil.logError("Error in the become online command remote invocation!",
+                    CHAT_REMOTE_COMMAND, e);
+        }
+    }
+
+    @Override
+    public void becomeOffline(BecomeOfflineCommand becomeOfflineCommand, User remoteUser) {
+
+        try {
+            get(remoteUser).becomeOffline(becomeOfflineCommand);
+        } catch (RemoteException e) {
+            LogUtil.logError("Error in the become offline command remote invocation!",
                     CHAT_REMOTE_COMMAND, e);
         }
     }

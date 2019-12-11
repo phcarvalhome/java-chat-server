@@ -8,7 +8,7 @@ import java.awt.*;
 
 public class MainView extends JFrame {
 
-    public static final String TITLE = "Chinese Checkers - Server";
+    public static final String TITLE = "Chat - Server";
 
     private MainController controller;
     private JPanel mainPanel;

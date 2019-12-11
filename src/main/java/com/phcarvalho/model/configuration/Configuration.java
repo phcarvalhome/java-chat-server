@@ -1,6 +1,8 @@
 package com.phcarvalho.model.configuration;
 
+import com.phcarvalho.model.communication.protocol.vo.command.SendMessageCommand;
 import com.phcarvalho.model.configuration.entity.User;
+import com.phcarvalho.model.vo.OfflineMessageList;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -22,11 +24,11 @@ public class Configuration {
 
     private User localUser;
     private List<User> remoteUserList;
-    private Integer gameCounter;
+    private Map<User, OfflineMessageList> offlineMessageListMap;
 
     private Configuration() {
         remoteUserList = new ArrayList<>();
-        gameCounter = 0;
+        offlineMessageListMap = new HashMap<>();
     }
 
     public void addRemoteUser(User remoteUser){
@@ -37,10 +39,49 @@ public class Configuration {
         remoteUserList.remove(user);
     }
 
+    public Boolean isRemoteUserOnline(User remoteUser){
+        return getRemoteUser(remoteUser)
+                .getOnline();
+    }
+
+    private User getRemoteUser(User remoteUser) {
+        return remoteUserList.stream()
+                .filter(remoteUserElement -> remoteUserElement.equals(remoteUser))
+                .findFirst()
+                .get();
+    }
+
+    public void setRemoteUserAsOnline(User remoteUser){
+        getRemoteUser(remoteUser)
+                .setOnline(true);
+    }
+
+    public void setRemoteUserAsOffline(User remoteUser){
+        getRemoteUser(remoteUser)
+                .setOnline(false);
+    }
+
     public List<User> getRemoteUserList(User remoteUser) {
         return remoteUserList.stream()
                 .filter(remoteUserElement -> !remoteUserElement.equals(remoteUser))
                 .collect(Collectors.toList());
+    }
+
+    public OfflineMessageList getOfflineMessageList(User user){
+        OfflineMessageList offlineMessageList = offlineMessageListMap.get(user);
+
+        if (offlineMessageList == null){
+            offlineMessageList = new OfflineMessageList();
+            offlineMessageListMap.put(user, offlineMessageList);
+        }
+
+        return offlineMessageList;
+    }
+
+    public void addOfflineMessage(SendMessageCommand sendMessageCommand){
+        User targetUser = sendMessageCommand.getTargetUser();
+
+        getOfflineMessageList(targetUser).add(sendMessageCommand);
     }
 
     public User getLocalUser() {
@@ -57,5 +98,8 @@ public class Configuration {
 
     public List<User> getRemoteUserList() {
         return remoteUserList;
+    }
+
+    public void getOfflineMessageList() {
     }
 }

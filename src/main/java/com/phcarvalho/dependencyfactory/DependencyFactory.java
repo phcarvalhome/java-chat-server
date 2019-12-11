@@ -9,10 +9,12 @@ import com.phcarvalho.model.MainModel;
 import com.phcarvalho.model.communication.commandtemplate.local.socket.CommandInvoker;
 import com.phcarvalho.model.communication.commandtemplate.remote.adapter.ChatRemoteCommandTemplateAdapter;
 import com.phcarvalho.model.communication.commandtemplate.remote.adapter.ConnectionRemoteCommandTemplateAdapter;
+import com.phcarvalho.model.communication.jms.QueueService;
 import com.phcarvalho.model.communication.strategy.ICommandTemplateFactory;
 import com.phcarvalho.model.communication.strategy.IConnectionStrategy;
 import com.phcarvalho.model.communication.strategy.factory.ICommunicationStrategy;
 import com.phcarvalho.model.communication.strategy.socket.SocketConnectionStrategy;
+import com.phcarvalho.model.communication.webservice.WebServicePublisher;
 import com.phcarvalho.view.ConnectedUserView;
 import com.phcarvalho.view.ConnectionView;
 import com.phcarvalho.view.MainView;
@@ -49,6 +51,9 @@ public class DependencyFactory {
 
         dependencyMap.put(ConnectionRemoteCommandTemplateAdapter.class, new ConnectionRemoteCommandTemplateAdapter());
         dependencyMap.put(ChatRemoteCommandTemplateAdapter.class, new ChatRemoteCommandTemplateAdapter());
+
+        dependencyMap.put(WebServicePublisher.class, new WebServicePublisher());
+        dependencyMap.put(QueueService.class, new QueueService());
 
         buildConnectedUserMVC();
         buildConnectionMVC();
